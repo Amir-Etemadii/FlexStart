@@ -1,0 +1,217 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include 'includes/head_tags.html' %}
+</head>
+
+<body class="index-page">
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="{% static 'img/logo.png' %}" alt="">
+            <h1 class="sitename">FlexStart</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="#hero" class="active">Home<br></a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="dropdown"><a href="#"><span>Dropdown</span> <i
+                        class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li><a href="#">Dropdown 1</a></li>
+                        <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">Deep Dropdown 1</a></li>
+                                <li><a href="#">Deep Dropdown 2</a></li>
+                                <li><a href="#">Deep Dropdown 3</a></li>
+                                <li><a href="#">Deep Dropdown 4</a></li>
+                                <li><a href="#">Deep Dropdown 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Dropdown 2</a></li>
+                        <li><a href="#">Dropdown 3</a></li>
+                        <li><a href="#">Dropdown 4</a></li>
+                    </ul>
+                </li>
+{#                <li class="listing-dropdown"><a href="#"><span>Listing Dropdown</span> <i#}
+{#                        class="bi bi-chevron-down toggle-dropdown"></i></a>#}
+{#                    <ul>#}
+{#                        <li>#}
+{#                            <a href="#">Column 1 link 1</a>#}
+{#                            <a href="#">Column 1 link 2</a>#}
+{#                            <a href="#">Column 1 link 3</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="#">Column 2 link 1</a>#}
+{#                            <a href="#">Column 2 link 2</a>#}
+{#                            <a href="#">Column 3 link 3</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="#">Column 3 link 1</a>#}
+{#                            <a href="#">Column 3 link 2</a>#}
+{#                            <a href="#">Column 3 link 3</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="#">Column 4 link 1</a>#}
+{#                            <a href="#">Column 4 link 2</a>#}
+{#                            <a href="#">Column 4 link 3</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="#">Column 5 link 1</a>#}
+{#                            <a href="#">Column 5 link 2</a>#}
+{#                            <a href="#">Column 5 link 3</a>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </li>#}
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Get Started</a>
+
+    </div>
+</header>
+
+<main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                    <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
+                    <p data-aos="fade-up" data-aos-delay="100">We are team of talented designers making websites with
+                        Bootstrap</p>
+                    <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#about" class="btn-get-started">Get Started <i class="bi bi-arrow-right"></i></a>
+                        <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                           class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i
+                                class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+                    <img src="{% static 'img/hero-img.png' %}" class="img-fluid animated" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+        {% include 'includes/aboutSection_tags.html' %}
+
+    </section><!-- /About Section -->
+
+    <!-- Values Section -->
+    <section id="values" class="values section">
+
+        {% include 'includes/valuesSection_tags.html' %}
+    </section><!-- /Values Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+        {% include 'includes/stateSection_tags.html' %}
+
+    </section><!-- /Stats Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+        {% include 'includes/featuresSection_tags.html' %}
+
+    </section><!-- /Features Section -->
+
+    <!-- Alt Features Section -->
+    <section id="alt-features" class="alt-features section">
+        {% include 'includes/altFeaturesSection_tags.html' %}
+    </section><!-- /Alt Features Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        {% include 'includes/servicesSection_tags.html' %}
+
+    </section><!-- /Services Section -->
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section">
+        {% include 'includes/pricingSection_tags.html' %}
+
+    </section><!-- /Pricing Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+        {% include 'includes/faqSection_tags.html' %}
+    </section><!-- /Faq Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+        {% include 'includes/portfolioSection_tags.html' %}
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+        {% include 'includes/testimonialsSection_tags.html' %}
+    </section><!-- /Testimonials Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+        {% include 'includes/teamSection_tags.html' %}
+    </section><!-- /Team Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+        {% include 'includes/clientsSection_tags.html' %}
+    </section><!-- /Clients Section -->
+
+    <!-- Recent Posts Section -->
+    <section id="recent-posts" class="recent-posts section">
+        {% include 'includes/recentPostsSection_tags.html' %}
+    </section><!-- /Recent Posts Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        {% include 'includes/contactSection_tags.html' %}
+    </section><!-- /Contact Section -->
+
+</main>
+
+<footer id="footer" class="footer">
+    {% include 'includes/footer_tags.html' %}
+
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+<script src="{% static 'vendor/aos/aos.js' %}"></script>
+<script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+<script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+<!-- Main JS File -->
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
