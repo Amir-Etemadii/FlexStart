@@ -18,8 +18,7 @@
                             <div class="info-item" data-aos="fade" data-aos-delay="200">
                                 <i class="bi bi-geo-alt"></i>
                                 <h3>Address</h3>
-                                <p>A108 Adam Street</p>
-                                <p>New York, NY 535022</p>
+                                <p>{{ ContactUs.all.last.address }}</p>
                             </div>
                         </div><!-- End Info Item -->
 
@@ -27,8 +26,8 @@
                             <div class="info-item" data-aos="fade" data-aos-delay="300">
                                 <i class="bi bi-telephone"></i>
                                 <h3>Call Us</h3>
-                                <p>+1 5589 55488 55</p>
-                                <p>+1 6678 254445 41</p>
+                                <p>{{ ContactUs.all.last.phoneNumber1 }}</p>
+                                <p>{{ ContactUs.all.last.phoneNumber2 }}</p>
                             </div>
                         </div><!-- End Info Item -->
 
@@ -36,8 +35,7 @@
                             <div class="info-item" data-aos="fade" data-aos-delay="400">
                                 <i class="bi bi-envelope"></i>
                                 <h3>Email Us</h3>
-                                <p>info@example.com</p>
-                                <p>contact@example.com</p>
+                                <p>{{ ContactUs.all.last.email }}</p>
                             </div>
                         </div><!-- End Info Item -->
 
@@ -45,8 +43,8 @@
                             <div class="info-item" data-aos="fade" data-aos-delay="500">
                                 <i class="bi bi-clock"></i>
                                 <h3>Open Hours</h3>
-                                <p>Monday - Friday</p>
-                                <p>9:00AM - 05:00PM</p>
+                                <p>{{ ContactUs.all.last.open_d_w }}</p>
+                                <p>{{ ContactUs.all.last.open_h }}</p>
                             </div>
                         </div><!-- End Info Item -->
 
@@ -55,8 +53,8 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                          data-aos-delay="200">
+                    <form method="post">
+                        {% csrf_token %}
                         <div class="row gy-4">
 
                             <div class="col-md-6">
@@ -79,10 +77,6 @@
                             </div>
 
                             <div class="col-12 text-center">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-
                                 <button type="submit">Send Message</button>
                             </div>
 

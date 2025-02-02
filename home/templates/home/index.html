@@ -28,17 +28,6 @@
                 <li class="dropdown"><a href="#"><span>Dropdown</span> <i
                         class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li><a href="#">Dropdown 1</a></li>
-                        <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                                class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="#">Deep Dropdown 1</a></li>
-                                <li><a href="#">Deep Dropdown 2</a></li>
-                                <li><a href="#">Deep Dropdown 3</a></li>
-                                <li><a href="#">Deep Dropdown 4</a></li>
-                                <li><a href="#">Deep Dropdown 5</a></li>
-                            </ul>
-                        </li>
                         <li><a href="#">Dropdown 2</a></li>
                         <li><a href="#">Dropdown 3</a></li>
                         <li><a href="#">Dropdown 4</a></li>
@@ -92,9 +81,8 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
-                    <p data-aos="fade-up" data-aos-delay="100">We are team of talented designers making websites with
-                        Bootstrap</p>
+                    <h1 data-aos="fade-up">{{ Home.all.last.title }}</h1>
+                    <p data-aos="fade-up" data-aos-delay="100">{{ Home.all.last.body }}</p>
                     <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
                         <a href="#about" class="btn-get-started">Get Started <i class="bi bi-arrow-right"></i></a>
                         <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
@@ -163,20 +151,11 @@
 
     </section><!-- /Portfolio Section -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-        {% include 'includes/testimonialsSection_tags.html' %}
-    </section><!-- /Testimonials Section -->
-
     <!-- Team Section -->
     <section id="team" class="team section">
         {% include 'includes/teamSection_tags.html' %}
     </section><!-- /Team Section -->
 
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
-        {% include 'includes/clientsSection_tags.html' %}
-    </section><!-- /Clients Section -->
 
     <!-- Recent Posts Section -->
     <section id="recent-posts" class="recent-posts section">
@@ -190,10 +169,7 @@
 
 </main>
 
-<footer id="footer" class="footer">
-    {% include 'includes/footer_tags.html' %}
 
-</footer>
 
 <!-- Scroll Top -->
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
