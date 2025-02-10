@@ -25,14 +25,19 @@
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li class="dropdown"><a href="#"><span>Dropdown</span> <i
+                {% if request.user.is_authenticated %}
+                    <li class="dropdown"><a href="#"><span>{{ request.user.username }}</span> <i
                         class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li><a href="#">Dropdown 2</a></li>
-                        <li><a href="#">Dropdown 3</a></li>
-                        <li><a href="#">Dropdown 4</a></li>
+                        <li><a href="{% url 'account:logout' %}">logout</a></li>
                     </ul>
                 </li>
+                {% else %}
+                    <li><a href="{% url 'account:login' %}">login</a></li>
+                    <span>/</span>
+                    <li><a href="{% url 'account:register' %}">register</a></li>
+                {% endif %}
+
 {#                <li class="listing-dropdown"><a href="#"><span>Listing Dropdown</span> <i#}
 {#                        class="bi bi-chevron-down toggle-dropdown"></i></a>#}
 {#                    <ul>#}

@@ -10,7 +10,6 @@ class Post(models.Model):
     image = models.ImageField(upload_to='images/posts')
 
     def get_production_date(self):
-        from datetime import datetime
         return self.created_date.strftime("%Y-%m-%d")
 
 
