@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from .models import Home,About,OurValue,WorkStatus,Feature,Feature2,Service,Price,Frequently,Team,Contact,ContactUs
+from .models import *
 from blog.models import Post
 
 def index(request):
 
     posts = Post.objects.all()
+
     if len(posts)>3:
         posts= posts[len(Post.objects.all())-1:len(Post.objects.all())-4:-1]
 

@@ -23,7 +23,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to='images/posts')
 
     def get_production_date(self):
-        return self.created_date.strftime("%Y-%m-%d")
+        return self.created_date.strftime("%b %d, %Y")
 
 
     def __str__(self):
