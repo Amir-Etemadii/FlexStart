@@ -15,7 +15,7 @@ def log_in(request):
             login(request, user)
             return redirect('home:index')
         else:
-            raise Http404()
+            raise Http404('user does\'t exist')
 
     return render(request, 'account/log-in.html', {})
 
