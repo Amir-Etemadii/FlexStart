@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from .models import *
 from blog.models import Post
+from django.contrib.auth.models import User
+
 
 def index(request):
-
     posts = Post.objects.all()
-
     if len(posts)>3:
         posts= posts[len(Post.objects.all())-1:len(Post.objects.all())-4:-1]
 
